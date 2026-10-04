@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>佳佳美容小教室｜大里扎肚與產後體態管理</title>
+  <meta
+    name="description"
+    content="佳佳美容小教室位於臺中市大里區，提供腹部包扎、束腹、腹部按摩與溫熱照護，打造溫暖安靜的體態管理空間。"
+  >
+
+  <style>
+    :root {
+      --brown-dark: #4b3529;
+      --brown: #6b4c3b;
+      --brown-light: #8b6b55;
+      --cream: #f8f4ec;
+      --cream-dark: #eee5d7;
+      --wood: #c9a982;
+      --wood-light: #dfc8a8;
+      --white: #fffdf9;
+      --text: #40352e;
+      --muted: #786b61;
+      --border: rgba(75, 53, 41, 0.12);
+      --shadow: 0 18px 45px rgba(75, 53, 41, 0.08);
+      --radius: 20px;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        "Noto Sans TC",
+        "PingFang TC",
+        "Microsoft JhengHei",
+        sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(100% - 40px, var(--max-width));
+      margin: 0 auto;
+    }
+
+    /* =========================
+       Header / Navigation
+    ========================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248, 244, 236, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      color: var(--brown-dark);
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      display: block;
+      color: var(--brown-light);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      position: relative;
+      color: var(--brown-dark);
+      font-size: 0.92rem;
+      transition: color 0.25s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0;
+      height: 1px;
+      background: var(--brown);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--brown-light);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: var(--brown-dark);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* =========================
+       Hero
+    ========================= */
+
+    .hero {
+      min-height: 680px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(248, 244, 236, 0.98) 0%,
+          rgba(248, 244, 236, 0.92) 45%,
+          rgba(248, 244, 236, 0.48) 100%
+        ),
+        radial-gradient(
+          circle at 78% 48%,
+          rgba(201, 169, 130, 0.5),
+          transparent 32%
+        ),
+        var(--cream);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 430px;
+      height: 430px;
+      right: -100px;
+      top: 80px;
+      border-radius: 50%;
+      background: var(--wood-light);
+      opacity: 0.45;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 270px;
+      height: 270px;
+      right: 130px;
+      bottom: -100px;
+      border-radius: 50%;
+      border: 1px solid rgba(107, 76, 59, 0.18);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 650px;
+      padding: 100px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      color: var(--brown-light);
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 35px;
+      height: 1px;
+      background: var(--wood);
+    }
+
+    .hero h1 {
+      color: var(--brown-dark);
+      font-family: "Noto Serif TC", "PingFang TC", serif;
+      font-size: clamp(2.5rem, 6vw, 4.8rem);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      line-height: 1.25;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: var(--brown-light);
+      font-size: 0.4em;
+      letter-spacing: 0.22em;
+      margin-top: 15px;
+    }
+
+    .hero-description {
+      max-width: 570px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 2;
+      margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 50px;
+      padding: 0 25px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      letter-spacing: 0.05em;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: var(--white);
+      background: var(--brown-dark);
+      box-shadow: 0 10px 25px rgba(75, 53, 41, 0.18);
+    }
+
+    .btn-primary:hover {
+      background: var(--brown);
+      box-shadow: 0 14px 30px rgba(75, 53, 41, 0.22);
+    }
+
+    .btn-outline {
+      color: var(--brown-dark);
+      border: 1px solid rgba(75, 53, 41, 0.25);
+      background: rgba(255, 253, 249, 0.45);
+    }
+
+    /* =========================
+       Common Sections
+    ========================= */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      max-width: 680px;
+      margin: 0 auto 55px;
+      text-align: center;
+    }
+
+    .section-label {
+      color: var(--brown-light);
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      color: var(--brown-dark);
+      font-family: "Noto Serif TC", "PingFang TC", serif;
+      font-size: clamp(1.9rem, 4vw, 2.7rem);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      margin-bottom: 15px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* =========================
+       About
+    ========================= */
+
+    .about {
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-visual {
+      min-height: 460px;
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(
+          135deg,
+          rgba(201, 169, 130, 0.35),
+          rgba(223, 200, 168, 0.75)
+        );
+      box-shadow: var(--shadow);
+    }
+
+    .about-visual::before {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 330px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(-7deg);
+      border: 1px solid rgba(75, 53, 41, 0.15);
+      border-radius: 50% 50% 45% 45%;
+    }
+
+    .about-visual::after {
+      content: "JIA JIA";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: rgba(75, 53, 41, 0.18);
+      font-family: Georgia, serif;
+      font-size: 2.4rem;
+      letter-spacing: 0.18em;
+    }
+
+    .about-copy h3 {
+      color: var(--brown-dark);
+      font-family: "Noto Serif TC", "PingFang TC", serif;
+      font-size: 1.65rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .about-copy > p {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 15px;
+      list-style: none;
+    }
+
+    .feature-list li {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--cream);
+    }
+
+    .feature-icon {
+      flex: 0 0 34px;
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      color: var(--brown-dark);
+      border-radius: 50%;
+      background: var(--wood-light);
+      font-size: 0.85rem;
+    }
+
+    .feature-list strong {
+      display: block;
+      color: var(--brown-dark);
+      margin-bottom: 2px;
+    }
+
+    .feature-list span {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    /* =========================
+       Service
+    ========================= */
+
+    .service {
+      background: var(--cream);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      padding: 34px 28px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 25px rgba(75, 53, 41, 0.04);
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .card-number {
+      color: var(--wood);
+      font-family: Georgia, serif;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      color: var(--brown-dark);
+      font-family: "Noto Serif TC", "PingFang TC", serif;
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* =========================
+       Business Info
+    ========================= */
+
+    .business {
+      background: var(--white);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .info-card {
+      padding: 32px;
+      border-radius: var(--radius);
+      background: var(--cream);
+      border: 1px solid var(--border);
+    }
+
+    .info-card h3 {
+      color: var(--brown-dark);
+      font-family: "Noto Serif TC", "PingFang TC", serif;
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .info-row:last-child {
+      border-bottom: 0;
+    }
+
+    .info-row strong {
+      color: var(--brown-dark);
+      font-weight: 600;
+      text-align: right;
+    }
+
+    .info-link {
+      color: var(--brown);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    /* =========================
+       Contact / CTA
+    ========================= */
+
+    .contact {
+      background:
+        linear-gradient(
+          135deg,
+          var(--brown-dark),
+          #614638
+        );
+      color: var(--white);
+      text-align: center;
+    }
+
+    .contact .section-label {
+      color: var(--wood-light);
+    }
+
+    .contact h2 {
+      color: var(--white);
+      font-family: "Noto Serif TC", "PingFang TC", serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .contact p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      color: rgba(255, 253, 249, 0.78);
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .contact .btn-primary {
+      color: var(--brown-dark);
+      background: var(--white);
+    }
+
+    .contact .btn-outline {
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.35);
+      background: transparent;
+    }
+
+    /* =========================
+       Footer
+    ========================= */
+
+    footer {
+      padding: 30px 0;
+      background: #382820;
+      color: rgba(255, 253, 249, 0.62);
+      text-align: center;
+      font-size: 0.78rem;
+    }
+
+    footer strong {
+      color: rgba(255, 253, 249, 0.9);
+      font-weight: 500;
+    }
+
+    /* =========================
+       Mobile
+    ========================= */
+
+    @media (max-width: 800px) {
+      .container {
+        width: min(100% - 30px, var(--max-width));
+      }
+
+      header {
+        position: sticky;
+      }
+
+      .nav {
+        min-height: 68px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        padding: 12px 20px 20px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: rgba(248, 244, 236, 0.98);
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 15px 25px rgba(75, 53, 41, 0.06);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links li:last-child {
+        border-bottom: 0;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 13px 5px;
+      }
+
+      .nav-links a::after {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        padding: 85px 0 100px;
+      }
+
+      .hero::before {
+        width: 300px;
+        height: 300px;
+        right: -120px;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .about-grid,
+      .cards,
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        gap: 40px;
+      }
+
+      .about-visual {
+        min-height: 330px;
+      }
+
+      .section-heading {
+        margin-bottom: 38px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-buttons,
+      .contact-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .info-card {
+        padding: 25px 20px;
+      }
+
+      .info-row {
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .info-row strong {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       Header
+  ========================== -->
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#top">
+        佳佳美容小教室
+        <span>JIA JIA BEAUTY</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="開啟選單"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+      <nav aria-label="主要選單">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">關於我們</a></li>
+          <li><a href="#service">服務特色</a></li>
+          <li><a href="#business">營業資訊</a></li>
+          <li><a href="#contact">聯絡我們</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- =========================
+         1. Hero 主視覺
+    ========================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">TAICHUNG · DALI</div>
+
+          <h1 id="hero-title">
+            溫柔照顧，
+            <br>
+            找回身體的自在
+            <span>扎肚・束腹・產後體態管理</span>
+          </h1>
+
+          <p class="hero-description">
+            在安靜溫暖的空間裡，透過腹部包扎、束腹與腹部按摩等方式，
+            陪伴妳慢慢找回熟悉的身體感受。
+          </p>
+
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#contact">預約諮詢</a>
+            <a class="btn btn-outline" href="#service">了解服務</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         2. 關於我們
+    ========================== -->
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="section-label">ABOUT US</div>
+          <h2 id="about-title">給自己一段慢下來的時間</h2>
+          <p>
+            不追求急迫改變，而是從舒適、放鬆與日常照護開始。
+          </p>
+        </div>
+
+        <div class="about-grid">
+
+          <div class="about-visual" aria-hidden="true"></div>
+
+          <div class="about-copy">
+            <h3>佳佳美容小教室</h3>
+
+            <p>
+              位於臺中市大里區，我們以溫暖、安靜的照護氛圍為出發點，
+              提供腹部包扎與束腹相關服務，並可搭配腹部按摩、
+              熱敷或精油護理，讓身體在舒服的節奏中獲得照顧。
+            </p>
+
+            <ul class="feature-list">
+              <li>
+                <div class="feature-icon">01</div>
+                <div>
+                  <strong>腹部包扎／束腹</strong>
+                  <span>透過布帶、彈力帶等方式協助固定腹部。</span>
+                </div>
+              </li>
+
+              <li>
+                <div class="feature-icon">02</div>
+                <div>
+                  <strong>腹部按摩與溫熱照護</strong>
+                  <span>依服務內容搭配按摩、熱敷或精油護理。</span>
+                </div>
+              </li>
+
+              <li>
+                <div class="feature-icon">03</div>
+                <div>
+                  <strong>產後體態管理</strong>
+                  <span>以日常照護為方向，陪伴產後體態慢慢調整。</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         3. 服務特色
+    ========================== -->
+    <section class="service" id="service" aria-labelledby="service-title">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="section-label">OUR SERVICE</div>
+          <h2 id="service-title">簡單、溫和的照護方式</h2>
+          <p>
+            依個人狀況與需求，與店家討論適合的照護方式。
+          </p>
+        </div>
+
+        <div class="cards">
+
+          <article class="card">
+            <div class="card-number">01</div>
+            <h3>腹部包扎</h3>
+            <p>
+              使用布帶或彈力帶進行腹部包扎與固定，
+              讓腰腹在日常活動中有穩定、包覆的感受。
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-number">02</div>
+            <h3>按摩・熱敷</h3>
+            <p>
+              可依服務安排搭配腹部按摩、熱敷或精油護理，
+              讓整個照護過程更放鬆、更有儀式感。
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-number">03</div>
+            <h3>產後體態管理</h3>
+            <p>
+              以產後日常體態照護為主軸，
+              協助建立對身體的照顧與觀察習慣。
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         4. 營業資訊
+    ========================== -->
+    <section class="business" id="business" aria-labelledby="business-title">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="section-label">INFORMATION</div>
+          <h2 id="business-title">營業資訊</h2>
+          <p>
+            預約前歡迎先電話或訊息確認時間與服務內容。
+          </p>
+        </div>
+
+        <div class="info-grid">
+
+          <div class="info-card">
+            <h3>店家資訊</h3>
+
+            <div class="info-row">
+              <span>店名</span>
+              <strong>佳佳美容小教室</strong>
+            </div>
+
+            <div class="info-row">
+              <span>地點</span>
+              <strong>
+                <a
+                  class="info-link"
+                  href="https://www.google.com/maps/search/?api=1&query=臺中市大里區"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  臺中市大里區｜查看地圖
+                </a>
+              </strong>
+            </div>
+
+            <div class="info-row">
+              <span>服務方式</span>
+              <strong>預約制</strong>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>預約提醒</h3>
+
+            <div class="info-row">
+              <span>預約</span>
+              <strong>請提前聯繫確認</strong>
+            </div>
+
+            <div class="info-row">
+              <span>服務內容</span>
+              <strong>依個人需求討論</strong>
+            </div>
+
+            <div class="info-row">
+              <span>注意事項</span>
+              <strong>身體不適請先諮詢專業醫療人員</strong>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         5. 聯絡與行動
+    ========================== -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+
+        <div class="section-label">CONTACT</div>
+
+        <h2 id="contact-title">想了解適合自己的方式嗎？</h2>
+
+        <p>
+          歡迎先聯繫我們，確認可預約的時間與服務內容。
+          第一次體驗前，也可以先提出你的需求與疑問。
+        </p>
+
+        <div class="contact-buttons">
+
+          <!-- 請將下方 09XXXXXXXXX 替換成店家實際電話 -->
+          <a
+            class="btn btn-primary"
+            href="tel:09XXXXXXXXX"
+          >
+            ☎ 電話預約
+          </a>
+
+          <a
+            class="btn btn-outline"
+            href="https://www.google.com/maps/search/?api=1&query=臺中市大里區"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ♧ 查看地圖
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================
+       6. Footer
+  ========================== -->
+  <footer>
+    <div class="container">
+      <strong>佳佳美容小教室</strong>
+      <span>｜ 臺中市大里區</span>
+      <br>
+      <span>© 2026 Jia Jia Beauty. All Rights Reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    // 手機版選單
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("active");
+
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "關閉選單" : "開啟選單"
+      );
+    });
+
+    // 點擊選單後自動關閉手機版選單
+    document.querySelectorAll("#navLinks a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "開啟選單");
+      });
+    });
+  </script>
+
+</body>
+</html>
